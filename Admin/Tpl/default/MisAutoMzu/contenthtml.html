@@ -1,0 +1,141 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_updateid" original="{$vo['updateid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["updateid"]}:
+				</label>
+				<span class="input_new">{$vo['updateid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_companyid" original="{$vo['companyid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["companyid"]}:
+				</label>
+				<span class="input_new">{$vo['companyid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_departmentid" original="{$vo['departmentid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["departmentid"]}:
+				</label>
+				<span class="input_new">{$vo['departmentid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_text7" original="{$vo['text7']}" category="text" style="">
+				<label class="label_new">
+					{$fields["text7"]}:
+				</label>
+				<span class="input_new">{$vo['text7']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_ly" original="{$vo['ly']}" category="text" style="">
+				<label class="label_new">
+					{$fields["ly"]}:
+				</label>
+				<span class="input_new">{$vo['ly']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_lookup5" original="{$vo['lookup5']}" category="lookup" style="">
+				<label class="label_new">
+					{$fields["lookup5"]}:
+				</label>
+				<span class="input_new">{:W('Lookup',array('1',$vo,'17','','false'))}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_select11" original="{$vo['select11']}" category="select" style="">
+				<label class="label_new">
+					{$fields["select11"]}:
+				</label>
+				<span class="input_new"></span>
+			</div>
+			<div class="col_1_3 form_group_lay field_date7" original="{$vo['date7']}" category="date" style="">
+				<label class="label_new">
+					{$fields["date7"]}:
+				</label>
+				<span class="input_new">{$vo['date7']|transtime='Y-m-d'}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_password8" original="{$vo['password8']}" category="password" style="">
+				<label class="label_new">
+					{$fields["password8"]}:
+				</label>
+				<span class="input_new">{:str_repeat('*', strlen($vo['password8']))}</span>
+			</div>  
+			<div class="col_1_3 form_group_lay field_hiddens10" original="{$vo['hiddens10']}" category="hiddens" style="">
+				<label class="label_new">
+					{$fields["hiddens10"]}:
+				</label>
+				<span class="input_new">{$vo['hiddens10']}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_textarea16" original="{$vo['textarea16']}" category="textarea" style="">
+				<label class="label_new">
+					{$fields["textarea16"]}:
+				</label>
+				<span class="input_new">{$vo['textarea16']|htmlspecialchars_decode}</span>
+			</div>
+			
+			<div class="fieldset_show_box col_8_0 form_group_lay field_fieldset18" original="{$vo['fieldset18']}" category="fieldset" style="">
+				<legend class="fieldset_legend_toggle side-catalog-text side-catalog-firstanchor">
+					<a name="fieldset18"></a>
+					<b></b>
+					<div class="tml_style_line tml_sl4 tml_slb_blue"></div>
+				</legend>
+			</div>
+			<div class="fieldsetjs_show_box col_8_0 form_group_lay field_fieldset18">
+			<div class="col_1_3 form_group_lay field_select26" original="{$vo['select26']}" category="select" style="">
+				<label class="label_new">
+					{$fields["select26"]}:
+				</label>
+				<span class="input_new"></span>
+			</div> 
+			<div class="col_4_0 form_group_lay field_fiexdtext21" style="">
+				<span class="block " style="text-align:left;background:#fff;color:#333;font-size:14px;line-height:30px;font-weight:400;">
+				
+				</span>
+			
+			
+			</div>
+			<div class="col_8_0 form_group_lay field_defcomponent23" style="">
+				
+			</div>
+			<div class="col_1_7 form_group_lay field_checkbox28" original="{$vo['checkbox28']}" category="checkbox" style="">
+				<label class="label_new">
+					{$fields["checkbox28"]}:
+				</label>
+				<span class="input_new">{$vo['checkbox28']|getSelectlistByName=''}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_upload30" original="{$vo['upload30']}" category="upload" style="">
+				<label class="label_new">
+					{$fields["upload30"]}:
+				</label>
+				<span class="input_new">
+								{:W('ShowUploadView',array("0"=>$uploadarry["upload30"],"1"=>upload30,"2"=>$fields[upload30],"3"=>"0","4"=>""))}<div class="display_none {$classNodeSettingArr['upload30']}"></div></span>
+			</div>
+			<div class="col_1_7 form_group_lay field_radio29" original="{$vo['radio29']}" category="radio" style="">
+				<label class="label_new">
+					{$fields["radio29"]}:
+				</label>
+				<span class="input_new">{$vo['radio29']|getSelectlistValue=''}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_areainfo31" original="{$vo['areainfo31']}" category="areainfo" style="">
+				<label class="label_new">
+					{$fields["areainfo31"]}:
+				</label>
+				<span class="input_new">{$vo['areainfo31']}</span>
+			</div> 
+			<div class="col_1_7 form_group_lay field_areainfo33" original="{$vo['areainfo33']}" category="areainfo" style="">
+				<label class="label_new">
+					{$fields["areainfo33"]}:
+				</label>
+				<span class="input_new">{$vo['areainfo33']}</span>
+			</div></div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoMzu',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	
+	
+	<div class="showFormFlow">
+	{:W('ShowFormFlowView',array_merge($vo,array('ShowActionName'=>'MisAutoMzu')))}</div>
+	{:W('ShowNotifyView',$vo)}
+	{:W('ShowAction')}
+</div>

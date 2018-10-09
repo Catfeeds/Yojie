@@ -1,0 +1,31 @@
+<script src="__TMPL__MisAutoDes/view.js" type="text/javascript"></script><script src="__TMPL__MisAutoDes/viewExtend.js" type="text/javascript"></script><script src="__PUBLIC__/Js/layer/layer.js" type="text/javascript"></script>
+<!-- 
+审批流模板：审批查看
+author:nbmxkj
+time:2015-09-06 18
+ -->
+{~$classNodeSettingArr = getModelClassByNodeSetting('MisAutoDes','view')}
+<div class="page">
+	<div class="pageContent">
+			<div class="pageFormContent applecloth anchorsToolBarParen" <if condition="!$_REQUEST['main'] or $_REQUEST['main'] eq MODULE_NAME">layoutH="40"</if>>
+				<div class="new_version_page ">
+				<form id="MisAutoDes_view"
+					{$appendPageContentArr[5]} {$formautosetting[3]}  
+					method="post" action="__APP__/MisAutoDes/updateControll/navTabId/__MODULE__" 
+					class="pageForm required-validate"
+					onsubmit="return validateCallback(this, navTabAjaxDone)">
+					<a class='xyz_anchornavi_top' name='MisAutoDes_view_top'></a>
+						<if condition="$_GET['viewtype'] neq 'view'">
+						<div class="new_version_page_header pageFormContent "><span class="left tml-ml20 ">项目管理</span>
+						{:W('ShowRightToolBar',array('view','MisAutoDes',$vo))}{:W('ShowAnchorNavi',array('MisAutoDes' , 'view',$main))}</div>
+						</if>
+						<include file="contenthtml" />
+						<div class="clear">
+							<span style="display:none;" class="anchornaviforshow">MisAutoDes_view</span>
+							<a class='xyz_anchornavi_buttom' name='MisAutoDes_view_bottom'></a>
+						</div>
+					</form>
+				</div>
+			</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_projectid" original="{$vo['projectid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectid"]}:
+				</label>
+				<span class="input_new">{$vo['projectid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createid" original="{$vo['createid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createid"]}:
+				</label>
+				<span class="input_new">{$vo['createid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_auth" original="{$vo['auth']}" category="text" style="">
+				<label class="label_new">
+					{$fields["auth"]}:
+				</label>
+				<span class="input_new">{$vo['auth']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_select13" original="{$vo['select13']}" category="select" style="">
+				<label class="label_new">
+					{$fields["select13"]}:
+				</label>
+				<span class="input_new"></span>
+			</div>
+			<div class="col_1_7 form_group_lay field_areainfomap7" original="{$vo['areainfomap7']}" category="areainfomap" style="">
+				<label class="label_new">
+					{$fields["areainfomap7"]}:
+				</label>
+				<span class="input_new"></span>
+			</div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoLxn',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	{:W('ShowAction')}
+</div>

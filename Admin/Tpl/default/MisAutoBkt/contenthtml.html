@@ -1,0 +1,56 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_projectid" original="{$vo['projectid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectid"]}:
+				</label>
+				<span class="input_new">{$vo['projectid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createid" original="{$vo['createid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createid"]}:
+				</label>
+				<span class="input_new">{$vo['createid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createtime" original="{$vo['createtime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createtime"]}:
+				</label>
+				<span class="input_new">{$vo['createtime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_testmanger" original="{$vo['testmanger']}" category="text" style="">
+				<label class="label_new">
+					{$fields["testmanger"]}:
+				</label>
+				<span class="input_new">{$vo['testmanger']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_teseproject" original="{$vo['teseproject']}" category="text" style="">
+				<label class="label_new">
+					{$fields["teseproject"]}:
+				</label>
+				<span class="input_new">{$vo['teseproject']}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_areainfo11" original="{$vo['areainfo11']}" category="areainfo" style="">
+				<label class="label_new">
+					{$fields["areainfo11"]}:
+				</label>
+				<span class="input_new">{$vo['areainfo11']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_lookup7" original="{$vo['lookup7']}" category="lookup" style="">
+				<label class="label_new">
+					{$fields["lookup7"]}:
+				</label>
+				<span class="input_new">{:W('Lookup',array('1',$vo,'87','','false'))}</span>
+			</div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoBkt',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	{:W('ShowAction')}
+</div>

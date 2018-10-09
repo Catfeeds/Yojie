@@ -1,0 +1,1 @@
+Time 2018-10-09 17:10:51 : INSERT INTO `mis_auto_pzfuk` (`testman`,`bindid`,`orderno`,`createtime`,`projectid`,`projectworkid`,`relationmodelname`,`areainfomap4`,`createid`,`companyid`,`departmentid`,`sysdutyid`,`allnode`) VALUES ('','','ZZJ201809005354313',1539076251,0,0,'','重庆市九龙坡区渝州路街道白合社区',1,0,0,0,'MisAutoAhf')

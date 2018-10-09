@@ -1,0 +1,74 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_operateid" original="{$vo['operateid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["operateid"]}:
+				</label>
+				<span class="input_new">{$vo['operateid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_projectid" original="{$vo['projectid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectid"]}:
+				</label>
+				<span class="input_new">{$vo['projectid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createid" original="{$vo['createid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createid"]}:
+				</label>
+				<span class="input_new">{$vo['createid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_updatetime" original="{$vo['updatetime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["updatetime"]}:
+				</label>
+				<span class="input_new">{$vo['updatetime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createtime" original="{$vo['createtime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createtime"]}:
+				</label>
+				<span class="input_new">{$vo['createtime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_auditState" original="{$vo['auditState']}" category="text" style="">
+				<label class="label_new">
+					{$fields["auditState"]}:
+				</label>
+				<span class="input_new">{$vo['auditState']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_name" original="{$vo['name']}" category="text" style="">
+				<label class="label_new">
+					{$fields["name"]}:
+				</label>
+				<span class="input_new">{$vo['name']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_content" original="{$vo['content']}" category="text" style="">
+				<label class="label_new">
+					{$fields["content"]}:
+				</label>
+				<span class="input_new">{$vo['content']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_lookup14" original="{$vo['lookup14']}" category="lookup" style="">
+				<label class="label_new">
+					{$fields["lookup14"]}:
+				</label>
+				<span class="input_new">{:W('Lookup',array('1',$vo,'53','','false'))}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_areainfo11" original="{$vo['areainfo11']}" category="areainfo" style="">
+				<label class="label_new">
+					{$fields["areainfo11"]}:
+				</label>
+				<span class="input_new">{$vo['areainfo11']}</span>
+			</div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoTxs',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	{:W('ShowAction')}
+</div>

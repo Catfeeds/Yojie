@@ -1,0 +1,1 @@
+Time 2018-09-28 09:58:42 : INSERT INTO `mis_auto_sauku` (`testmanger`,`teseproject`,`bindid`,`orderno`,`createid`,`createtime`,`projectid`,`projectworkid`,`relationmodelname`,`lookup7`,`companyid`,`departmentid`,`sysdutyid`,`allnode`) VALUES ('肖森','地址组件','','001001028',1,1538099922,20180928,0,'','',0,0,0,'MisAutoBkt')

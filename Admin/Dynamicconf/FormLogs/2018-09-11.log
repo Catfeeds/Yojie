@@ -1,0 +1,47 @@
+Time 2018-09-11 13:50:36 : C:MisDynamicFormBaseAction L:1204执行结果 
+CREATE TABLE IF NOT EXISTS `mis_auto_stmgn` 
+(`id` int(11) NOT NULL AUTO_INCREMENT  COMMENT 'ID' ,
+	`content` varchar(255)  DEFAULT NULL  COMMENT '内容', 
+	`bindid` varchar(100)  COMMENT '绑定id' ,
+	`orderno` varchar(100) NULL COMMENT '编号' ,
+	`status` tinyint(1) DEFAULT '1' COMMENT '状态' ,
+	`companyid` int(10) DEFAULT '0'NULL COMMENT '公司ID' ,
+	`createid` int(10) DEFAULT '0'NULL COMMENT '创建人ID' ,
+	`createtime` int(11) NULL COMMENT '创建时间' ,
+	`updateid` int(10) NULL COMMENT '修改人ID' ,
+	`updatetime` int(11) NULL COMMENT '修改时间' ,
+	`operateid` int(1) DEFAULT '0'NOT NULL COMMENT '是否确认' ,
+	`departmentid` int(10) DEFAULT '0'NULL COMMENT '部门ID' ,
+	`projectid` int(10) NULL COMMENT '项目ID' ,
+	`projectworkid` int(10) NULL COMMENT '任务ID' ,
+	`sysdutyid` int(10) NULL COMMENT '职级ID' ,
+	`relationmodelname` varchar(100) NULL COMMENT '关系型关联model' ,
+	`auditUser` varchar(200) NULL COMMENT '提醒人组合' ,
+	`ptmptid` int(10) NULL COMMENT '固定流程ID' ,
+	`flowid` int(10) DEFAULT '0'NULL COMMENT '自定义流程ID' ,
+	`ostatus` varchar(100) NULL COMMENT '当前审核节点' ,
+	`auditState` tinyint(1) DEFAULT '0'NULL COMMENT '当前审核状态' ,
+	`curAuditUser` varchar(300) NULL COMMENT '当前可审核人清单' ,
+	`curNodeUser` varchar(300) NULL COMMENT '当前待审核人清单' ,
+	`alreadyAuditUser` varchar(500) NULL COMMENT '当前已审核人' ,
+	`alreadyauditnode` int(11) DEFAULT '0'NULL COMMENT '终审时间' ,
+	`allnode` varchar(100) NULL COMMENT '所有流程节点' ,
+	`informpersonid` varchar(500) NULL COMMENT '节点知道会人' ,
+	`parentid` int(10) DEFAULT '0'NULL COMMENT '父类ID' ,
+	`name` varchar(50) DEFAULT '0'NULL COMMENT '名称' ,
+	 PRIMARY KEY (`id`)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='test'
+Time 2018-09-11 13:50:36 : C:MisDynamicFormBaseAction L:1206执行结果：array(
+)数据库建表语句 操作结果：
+Time 2018-09-11 13:50:36 : INSERT INTO `node` (`name`,`title`,`type`,`showmenu`,`level`,`pid`,`group_id`,`icon`,`isdynamic`,`isprojectwork`,`isprocess`,`remark`,`formtype`) VALUES ('MisAutoTxs','留言内容',3,1,3,6146,38,'-.png',1,1,0,'自动生成:MisAutoTxs',1)
+Time 2018-09-11 13:50:36 : C:MisDynamicFormManageAction L:4902插入到相应到相应的数据记录表中：模板名称 。index
+Time 2018-09-11 13:50:36 : C:MisDynamicFormManageAction L:4903插入到相应到相应的数据记录表中：misd记录表新增id。1
+Time 2018-09-11 13:50:36 : C:MisDynamicFormManageAction L:5055插入属性表记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`titlepercent`,`contentpercent`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`isforeignfield`,`lookupgrouporg`,`dbname`,`tablelength`,`fieldtype`) VALUES (1,'1','3','text',9,'content','内容',1,1,null,'','mis_auto_stmgn','255','varchar')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',0,'operateid','是否确认',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',1,'projectid','项目',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',2,'createid','创建人',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',3,'updatetime','修改时间',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',4,'createtime','创建时间',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',5,'auditState','当前审核状态',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',6,'name','名称',1,1,1,3,'mis_auto_stmgn')
+Time 2018-09-11 13:50:37 : C:MisDynamicFormManageAction L:5110处理系统字段组件化问题：属性记录表插入记录：INSERT INTO `mis_dynamic_form_propery` (`ids`,`category`,`sort`,`fieldname`,`title`,`formid`,`tplid`,`titlepercent`,`contentpercent`,`dbname`) VALUES (0,'text',7,'orderno','编号',1,1,1,3,'mis_auto_stmgn')

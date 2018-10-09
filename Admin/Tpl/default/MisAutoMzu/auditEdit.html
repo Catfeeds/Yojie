@@ -1,0 +1,299 @@
+<script src="__TMPL__MisAutoMzu/edit.js" type="text/javascript"></script><script src="__TMPL__MisAutoMzu/editExtend.js" type="text/javascript"></script><script src="__PUBLIC__/Js/layer/layer.js" type="text/javascript"></script>
+<!-- 
+审批流模板：审批页面 
+author:nbmxkj 
+time:2015-09-06 18 
+-->
+{~$classNodeSettingArr = getModelClassByNodeSetting('MisAutoMzu','edit')}
+{~$appendPageContentArr = getBindTabsContent('MisAutoMzu',$vo,'edit','',$main)}
+{~$formautosetting = setFormControllAutoCreate('MisAutoMzu' ,'edit' , $main , 'update',$vo)}
+{$appendPageContentArr[1]}
+<div class="page">
+    <div class="pageContent">
+        <div class="pageFormContent applecloth anchorsToolBarParen" <if condition="!$_REQUEST['main'] or $_REQUEST['main'] eq MODULE_NAME">layoutH="40"</if>>
+            <div class="new_version_page ">
+               <form method="post" id="MisAutoMzu_auditEdit" action="__APP__/MisAutoMzu/auditProcess/navTabId/__MODULE__" class="pageForm-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+                    <a class="xyz_anchornavi_top" name="MisAutoMzu_edit_top"></a>
+                    <input type="hidden" name="id" value="{$vo['id']}" />
+                    <input type="hidden" name="callbackType" value="closeCurrent" />
+                    <input type="hidden" name="masid" value="{$vo['id']}" />
+                    <if condition="$_GET['viewtype'] neq 'view'">
+                        <div class="new_version_page_header pageFormContent ">
+                            <span class="left tml-ml20 ">
+                                发吧开办费
+                            </span>
+                            {:W('ShowRightToolBar',array('edit','MisAutoMzu',$vo))}
+							{:W('ShowAnchorNavi',array('MisAutoMzu', 'edit',$main))}
+                        </div>
+                    </if>
+                    <div class="new_version_page_content">
+                        
+                       							
+						<!-- 文本框组件 -->
+						<div class="col_1_3 form_group_lay field_updateid" original="{$vo['updateid']}" category="text" style="">
+							<label class="label_new">{$fields["updateid"]}</label>
+							<input  dropback="#dropback#"  type="text"  name="updateid"  class=" input_new  " <if condition="$vo['updateid'] neq ''">value="{$vo['updateid']}"<else/>value=""</if>  >
+							<div class="display_none {$classNodeSettingArr['updateid']}">{$vo['updateid']}</div>
+						</div>							
+						<!-- 文本框组件 -->
+						<div class="col_1_3 form_group_lay field_companyid" original="{$vo['companyid']}" category="text" style="">
+							<label class="label_new">{$fields["companyid"]}</label>
+							<input  dropback="#dropback#"  type="text"  name="companyid"  class=" input_new  " <if condition="$vo['companyid'] neq ''">value="{$vo['companyid']}"<else/>value=""</if>  >
+							<div class="display_none {$classNodeSettingArr['companyid']}">{$vo['companyid']}</div>
+						</div>							
+						<!-- 文本框组件 -->
+						<div class="col_1_3 form_group_lay field_departmentid" original="{$vo['departmentid']}" category="text" style="">
+							<label class="label_new">{$fields["departmentid"]}</label>
+							<input  dropback="#dropback#"  type="text"  name="departmentid"  class=" input_new  " <if condition="$vo['departmentid'] neq ''">value="{$vo['departmentid']}"<else/>value=""</if>  >
+							<div class="display_none {$classNodeSettingArr['departmentid']}">{$vo['departmentid']}</div>
+						</div>
+						{:W('ShowOrderno',array(5,'mis_auto_cdzws',$vo['orderno'],array('contentcls'=>'col_1_3 form_group_lay field_orderno',	'inputcls'=>'class="input_new "','title'=>$fields["orderno"],'isshow'=>1)))}
+													
+						<!-- 文本框组件 -->
+						<div class="col_1_3 form_group_lay field_text7" original="{$vo['text7']}" category="text" style="">
+							<label class="label_new">{$fields["text7"]}</label>
+							<input  dropback="#dropback#"  type="text"  name="text7"  class=" input_new  " <if condition="$vo['text7'] neq ''">value="{$vo['text7']}"<else/>value=""</if>  >
+							<div class="display_none {$classNodeSettingArr['text7']}">{$vo['text7']}</div>
+						</div>							
+						<!-- 文本框组件 -->
+						<div class="col_1_3 form_group_lay field_ly" original="{$vo['ly']}" category="text" style="">
+							<label class="label_new">{$fields["ly"]}</label>
+							<input  dropback="#dropback#"  type="text"  name="ly"  class=" input_new  " <if condition="$vo['ly'] neq ''">value="{$vo['ly']}"<else/>value=""</if>  >
+							<div class="display_none {$classNodeSettingArr['ly']}">{$vo['ly']}</div>
+						</div>					
+						<!-- 查找带回组件 -->
+						<div class="col_1_3 form_group_lay field_lookup5" original="{$vo['lookup5']}" category="lookup" style="">
+							<label class="label_new">
+								{$fields["lookup5"]}
+							</label>
+							{:W('Lookup',array('1',$vo,'17','1','','#ganshe#'))}
+							<div class="display_none {$classNodeSettingArr['lookup5']}">{:W('Lookup',array('1',$vo,'17','1',1))}</div>
+						</div>
+											
+						<!-- 下拉框组件 -->
+						<div class="col_1_3 form_group_lay field_select11" original="{$vo['select11']}" category="select" style="">
+							<label class="label_new">{$fields["select11"]}</label>
+							{:W('ShowSelect',
+							array(
+								$vo['select11'],
+								array(
+									'',
+									array(
+										'type'=>(''==''?'table':'selectlist'),
+										array(
+											'key'=>'',
+											'readonly'=>'1',
+											'targevent'=>'',
+											'actionName'=>'MisAutoMzu',
+											'names'=>'select11',
+											'defaultcheckitem'=>'',
+											'defaultval'=>'',
+											'defaulttext'=>'',
+											'table'=>'', 
+											'id'=>'',
+											'name'=>'' ,
+											'conditions'=>'',
+											'parentid'=>'',
+											'mulit'=>'',
+											'isnextend'=>'',
+											'treeheight'=>'',
+											'treewidth'=>'',
+											'isedit'=>'1',
+											'showtype'=>'',
+											'defaultcheckitem'=>''
+											)
+										)
+									)
+								)
+							)
+							}
+						</div>
+												
+						<!-- 日期组件 -->
+						<div class="col_1_3 form_group_lay field_date7" original="{$vo['date7']}" category="date" style="">
+							<label class="label_new">
+								{$fields["date7"]}
+							</label>
+							<div  class="tml-input-calendar">
+								<input type="text" name="date7"  class="input_new half_angle_input Wdate {:'1'?'js-wdate':''}  input_left " format='{"dateFmt":"yyyy-MM-dd"}'   value="{$vo['date7']|transtime='Y-m-d'}"/>
+								<a href="javascript:;" class="icon_elm icon-calendar {:'1'?'js-inputCheckDate':''} "></a>
+							</div>
+							<div class="display_none {$classNodeSettingArr['date7']}">
+								{$vo['date7']|transtime='Y-m-d'}
+							</div>
+						</div>
+							
+						<!-- 密码组件 -->
+						<div category="text" class="col_1_3 form_group_lay field_wenbenkuang ">
+							<label class="label_new">{$fields["password8"]}</label>
+							<input type="password" value="{$vo['password8']}" class="input_new " name="password8" />
+							<div class="display_none {$classNodeSettingArr['password8']}"></div>
+						</div>						
+						<!-- 标签组件 -->
+						<div class="col_1_3 form_group_lay field_tablabel9" original="{$vo['tablabel9']}" category="tablabel" style="">
+							<label class="label_new">标签_9</label>
+							<input type="text" readonly="readonly"  name="tablabel9" class=" input_new  " value="{$vo['tablabel9']}">
+							<div class="display_none {$classNodeSettingArr['tablabel9']}">{$vo['tablabel9']}</div>
+						</div>							
+						<!-- 标签组件 -->
+						<div class="col_1_3 form_group_lay field_tablabel25" original="{$vo['tablabel25']}" category="tablabel" style="">
+							<label class="label_new">标签_25</label>
+							<input type="text" readonly="readonly"  name="tablabel25" class=" input_new  " value="{$vo['tablabel25']}">
+							<div class="display_none {$classNodeSettingArr['tablabel25']}">{$vo['tablabel25']}</div>
+						</div>								
+						<!-- 隐藏域组件 -->
+						<div class="col_1_3 form_group_lay field_hiddens10" original="{$vo['hiddens10']}" category="hiddens" style="display:none;">
+							<label class="label_new">{$fields["hiddens10"]}</label>
+							<input type="hidden"  name="hiddens10" class=" input_new  "  value="{$vo['hiddens10']}">
+							<div class="display_none {$classNodeSettingArr['hiddens10']}">{$vo['hiddens10']}</div>
+						</div>							
+						<!-- 文本域组件 -->
+						<div class="col_1_7 form_group_lay field_textarea16" original="{$vo['textarea16']}" category="textarea" style="">
+							<label class="label_new">{$fields["textarea16"]}</label>
+							<textarea   cols="100" rows="4"  class="text_area " name="textarea16"><if condition="$vo['textarea16']">{$vo['textarea16']}<else/></if></textarea>
+							<div class="display_none {$classNodeSettingArr['textarea16']}">{$vo['textarea16']}</div>
+						</div>
+						
+						
+						<!-- 作用域组件 -->
+						<div class="fieldset_show_box col_8_0 form_group_lay field_fieldset18" original="{$vo['fieldset18']}" category="fieldset" style="">
+							<legend class="fieldset_legend_toggle side-catalog-text side-catalog-firstanchor">
+								<a name="fieldset18"></a>
+								<b></b>
+								<div class="tml_style_line tml_sl4 tml_slb_blue"></div>
+							</legend>
+						</div>
+						<div class="fieldsetjs_show_box col_8_0 form_group_lay field_fieldset18">					
+						<!-- 下拉框组件 -->
+						<div class="col_1_3 form_group_lay field_select26" original="{$vo['select26']}" category="select" style="">
+							<label class="label_new">{$fields["select26"]}</label>
+							{:W('ShowSelect',
+							array(
+								$vo['select26'],
+								array(
+									'',
+									array(
+										'type'=>(''==''?'table':'selectlist'),
+										array(
+											'key'=>'',
+											'readonly'=>'1',
+											'targevent'=>'',
+											'actionName'=>'MisAutoMzu',
+											'names'=>'select26',
+											'defaultcheckitem'=>'',
+											'defaultval'=>'',
+											'defaulttext'=>'',
+											'table'=>'', 
+											'id'=>'',
+											'name'=>'' ,
+											'conditions'=>'',
+											'parentid'=>'',
+											'mulit'=>'',
+											'isnextend'=>'',
+											'treeheight'=>'',
+											'treewidth'=>'',
+											'isedit'=>'1',
+											'showtype'=>'',
+											'defaultcheckitem'=>''
+											)
+										)
+									)
+								)
+							)
+							}
+						</div>
+											
+						<!-- 换行符组件 -->
+						<div class="col_8_0 form_group_lay field_divider220" original="{$vo['divider220']}" category="divider2" style=" min-height:1px;line-height:1px;margin:0;">
+						</div>
+					
+						<!-- 固定文本组件 -->
+						<div class="col_4_0 form_group_lay field_fiexdtext21" original="{$vo['fiexdtext21']}" category="fiexdtext" style="">
+							<span class="block " style="text-align:left;background:#fff;color:#333;font-size:14px;line-height:30px;font-weight:400;">
+							
+							</span>
+						</div>
+														
+						<!-- 自定义组件 -->
+						<div class="col_8_0 form_group_lay field_defcomponent23" original="{$vo['defcomponent23']}" category="defcomponent" style="">
+							
+						</div>
+							
+						<!-- 复选框组件 -->
+						<div class="col_1_7 form_group_lay field_checkbox28" original="{$vo['checkbox28']}" category="checkbox" style="">
+							<label class="label_new">{$fields["checkbox28"]}</label>
+							{:getControllbyHtml(''==''?'table':'selectlist' , 
+								array(
+									'type'=>'checkbox',
+									'key'=>'',
+									'table'=>'',
+									'id'=>'',
+									'name'=>'' ,
+									'selected'=>$vo['checkbox28'],
+									'names'=>'checkbox28[]' ,
+									'readonly'=>'1',
+									'showtype'=>'',
+									'conditions'=>''
+								)
+							)}
+							<div class="display_none {$classNodeSettingArr['checkbox28']}">{$vo['checkbox28']}</div>
+						</div>						
+						<!-- 上传组件 -->
+						<div class="col_1_7 form_group_lay field_upload30" original="{$vo['upload30']}" category="upload" style="">
+							{:W('ShowUpload',array("0"=>$uploadarry["upload30"],"1"=>"upload30","2"=>$fields[upload30],"3"=>"0","4"=>"",'5'=>"0"))}
+						</div>
+						
+											
+						<!-- 单选组件 -->
+						<div class="col_1_7 form_group_lay field_radio29" original="{$vo['radio29']}" category="radio" style="">
+							
+								<label class="label_new">{$fields["radio29"]}:</label>
+								{:getControllbyHtml('selectlist',array('type'=>'radio','targevent'=>'','names'=>'radio29','key'=>'','selected'=>$vo['radio29']))}<div class="display_none {$classNodeSettingArr['radio29']}"></div>
+						</div>	
+						<!-- 地址组件 -->
+						<div class="col_1_7 form_group_lay field_areainfo31" original="{$vo['areainfo31']}" category="areainfo" style="">
+							<label class="label_new">{$fields["areainfo31"]}</label>
+							{:W('ShowArea',
+								array("0"=>$areainfoarry["areainfo31"],
+								"1"=>areainfo31,
+								"2"=>$fields[areainfo31],
+								"3"=>"",
+								"5"=>"")
+							)}
+							<div class="display_none {$classNodeSettingArr['areainfo31']}">{$vo['areainfo31']}</div>
+						</div>					
+						<!-- 换行符组件 -->
+						<div class="col_8_0 form_group_lay field_divider232" original="{$vo['divider232']}" category="divider2" style=" min-height:1px;line-height:1px;margin:0;">
+						</div>
+	
+						<!-- 地址组件 -->
+						<div class="col_1_7 form_group_lay field_areainfo33" original="{$vo['areainfo33']}" category="areainfo" style="">
+							<label class="label_new">{$fields["areainfo33"]}</label>
+							{:W('ShowArea',
+								array("0"=>$areainfoarry["areainfo33"],
+								"1"=>areainfo33,
+								"2"=>$fields[areainfo33],
+								"3"=>"",
+								"5"=>"")
+							)}
+							<div class="display_none {$classNodeSettingArr['areainfo33']}">{$vo['areainfo33']}</div>
+						</div></div>
+                        <div class="showFormFlow">
+                            {:W('ShowFormFlowView',array_merge($vo,array('ShowActionName'=>'MisAutoMzu')))}
+                        </div>
+                        {:W('ShowNotifyView',$vo)} {:W('ShowAction',array('data'=>$vo))}
+                    </div>
+                    <div class="clear">
+                        <span style="display:none;" class="anchornaviforshow">
+                            MisAutoMzu_edit
+                        </span>
+                        <a class="xyz_anchornavi_buttom" name="MisAutoMzu_edit_bottom">
+                        </a>
+                    </div>
+                </form>
+                <div class="clear"></div>
+                {$appendPageContentArr[2]} {$appendPageContentArr[3]}
+            </div>
+        </div>
+    </div>
+</div>

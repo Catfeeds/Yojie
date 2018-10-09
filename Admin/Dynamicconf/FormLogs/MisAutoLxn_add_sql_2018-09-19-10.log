@@ -1,0 +1,1 @@
+Time 2018-09-19 10:50:20 : INSERT INTO `mis_auto_oxqxg` (`content`,`auth`,`bindid`,`orderno`,`createid`,`createtime`,`projectid`,`projectworkid`,`relationmodelname`,`name`,`lookup7`,`areainfo8`,`date9`,`companyid`,`departmentid`,`sysdutyid`,`allnode`) VALUES ('测试内容是否可用','肖森','','001001007',1,1537325420,20180919,0,'','测试内容','','黑龙江省',1537286400,0,0,0,'MisAutoLxn')

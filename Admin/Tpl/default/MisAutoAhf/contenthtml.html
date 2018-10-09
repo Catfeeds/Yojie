@@ -1,0 +1,38 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_projectid" original="{$vo['projectid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectid"]}:
+				</label>
+				<span class="input_new">{$vo['projectid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createtime" original="{$vo['createtime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createtime"]}:
+				</label>
+				<span class="input_new">{$vo['createtime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_testman" original="{$vo['testman']}" category="text" style="">
+				<label class="label_new">
+					{$fields["testman"]}:
+				</label>
+				<span class="input_new">{$vo['testman']}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_areainfomap4" original="{$vo['areainfomap4']}" category="areainfomap" style="">
+				<label class="label_new">
+					{$fields["areainfomap4"]}:
+				</label>
+				<span class="input_new"></span>
+			</div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoAhf',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	{:W('ShowAction')}
+</div>

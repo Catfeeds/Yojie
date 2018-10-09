@@ -1,0 +1,112 @@
+<div class="new_version_page_content">
+	
+			<div class="col_1_3 form_group_lay field_operateid" original="{$vo['operateid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["operateid"]}:
+				</label>
+				<span class="input_new">{$vo['operateid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_projectworkid" original="{$vo['projectworkid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectworkid"]}:
+				</label>
+				<span class="input_new">{$vo['projectworkid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_projectid" original="{$vo['projectid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["projectid"]}:
+				</label>
+				<span class="input_new">{$vo['projectid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_companyid" original="{$vo['companyid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["companyid"]}:
+				</label>
+				<span class="input_new">{$vo['companyid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createid" original="{$vo['createid']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createid"]}:
+				</label>
+				<span class="input_new">{$vo['createid']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_updatetime" original="{$vo['updatetime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["updatetime"]}:
+				</label>
+				<span class="input_new">{$vo['updatetime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_createtime" original="{$vo['createtime']}" category="text" style="">
+				<label class="label_new">
+					{$fields["createtime"]}:
+				</label>
+				<span class="input_new">{$vo['createtime']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_name" original="{$vo['name']}" category="text" style="">
+				<label class="label_new">
+					{$fields["name"]}:
+				</label>
+				<span class="input_new">{$vo['name']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_orderno" original="{$vo['orderno']}" category="text" style="">
+				<label class="label_new">
+					{$fields["orderno"]}:
+				</label>
+				<span class="input_new">{$vo['orderno']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_password13" original="{$vo['password13']}" category="password" style="">
+				<label class="label_new">
+					{$fields["password13"]}:
+				</label>
+				<span class="input_new">{:str_repeat('*', strlen($vo['password13']))}</span>
+			</div>
+			<div class="col_1_7 form_group_lay field_content" original="{$vo['content']}" category="textarea" style="">
+				<label class="label_new">
+					{$fields["content"]}:
+				</label>
+				<span class="input_new">{$vo['content']|htmlspecialchars_decode}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_developres" original="{$vo['developres']}" category="text" style="">
+				<label class="label_new">
+					{$fields["developres"]}:
+				</label>
+				<span class="input_new">{$vo['developres']}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_estimatedtime" original="{$vo['estimatedtime']}" category="date" style="">
+				<label class="label_new">
+					{$fields["estimatedtime"]}:
+				</label>
+				<span class="input_new">{$vo['estimatedtime']|transtime='Y-m-d'}</span>
+			</div>
+			<div class="col_1_3 form_group_lay field_actualtime" original="{$vo['actualtime']}" category="date" style="">
+				<label class="label_new">
+					{$fields["actualtime"]}:
+				</label>
+				<span class="input_new">{$vo['actualtime']|transtime='Y-m-d'}</span>
+			</div>
+			
+			<div class="fieldset_show_box col_8_0 form_group_lay field_fieldset15" original="{$vo['fieldset15']}" category="fieldset" style="">
+				<legend class="fieldset_legend_toggle side-catalog-text side-catalog-firstanchor">
+					<a name="fieldset15"></a>
+					<b></b>
+					<div class="tml_style_line tml_sl4 tml_slb_blue"></div>
+				</legend>
+			</div>
+			<div class="fieldsetjs_show_box col_8_0 form_group_lay field_fieldset15">
+			<div class="col_1_7 form_group_lay field_areainfo16" original="{$vo['areainfo16']}" category="areainfo" style="">
+				<label class="label_new">
+					{$fields["areainfo16"]}:
+				</label>
+				<span class="input_new">{$vo['areainfo16']}</span>
+			</div></div>
+	<div class="clear"></div>
+	{~$appendPageContentArr = getBindTabsContent('MisAutoDes',$vo,'view')}
+	{$appendPageContentArr[2]}
+	{$appendPageContentArr[3]}
+	
+	
+	<div class="showFormFlow">
+	{:W('ShowFormFlowView',array_merge($vo,array('ShowActionName'=>'MisAutoDes')))}</div>
+	{:W('ShowNotifyView',$vo)}
+	{:W('ShowAction')}
+</div>
