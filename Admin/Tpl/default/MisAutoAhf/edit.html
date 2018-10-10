@@ -77,7 +77,7 @@
                         <div class="col_1_7 form_group_lay field_areainfomap4" original="{$vo['areainfomap4']}" category="areainfomap" style="">
                             <label class="label_new">{$fields["areainfomap4"]}</label>
                             {:W('ShowArea',
-                            array("0"=>$areainfoarry["areainfomap4"],
+                            array("0"=>$areainfo["areainfomap4"],
                             "1"=>areainfomap4,
                             "2"=>$fields[areainfomap4],
                             "3"=>"",
@@ -85,13 +85,12 @@
                             )}
 
                             <div class="display_none {$classNodeSettingArr['areainfomap4']}">
-                                <input type="hidden" name="areainfoMap[areainfomap4][province]" value="{$areainfoMap['areainfomap4']['province']}">
-                                <input type="hidden" name="areainfoMap[areainfomap4][city]" value="{$areainfoMap['areainfomap4']['city']}">
-                                <input type="hidden" name="areainfoMap[areainfomap4][area]" value="{$areainfoMap['areainfomap4']['area']}">
-                                <input type="hidden" name="areainfoMap[areainfomap4][address]" value="{$areainfoMap['areainfomap4']['address']}">
-                                <input type="hidden" name="areainfoMap[areainfomap4][longitude]" value="{$areainfoMap['areainfomap4']['longitude']}"/>
-                                <input type="hidden" name="areainfoMap[areainfomap4][latitude]" value="{$areainfoMap['areainfomap4']['latitude']}"/>
-                                <input type="hidden" name="areainfoMap[areainfomap4][formattedAddress]" value="{$areainfoMap['areainfomap4']['detail']}"/>
+                                <input type="hidden" name="areainfo[areainfomap4][province]" value="{$areainfo['areainfomap4']['province']}">
+                                <input type="hidden" name="areainfo[areainfomap4][city]" value="{$areainfo['areainfomap4']['city']}">
+                                <input type="hidden" name="areainfo[areainfomap4][area]" value="{$areainfo['areainfomap4']['area']}">
+                                <input type="hidden" name="areainfo[areainfomap4][longitude]" value="{$areainfo['areainfomap4']['longitude']}"/>
+                                <input type="hidden" name="areainfo[areainfomap4][latitude]" value="{$areainfo['areainfomap4']['latitude']}"/>
+                                <input type="hidden" name="areainfo[areainfomap4][formattedAddress]" value="{$areainfo['areainfomap4']['detail']}"/>
                             </div>
                         </div>
 
