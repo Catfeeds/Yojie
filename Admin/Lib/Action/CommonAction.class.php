@@ -2961,28 +2961,30 @@ EOF;
         foreach ($areaArr as $key=>$val){
             $areainfoarry[$val['fieldname']][]=$val;
         }
-//        dump($areainfoarry);exit;
-//        /**
-//         * 修改后的地区信息获取 Start
-//         */
-//
-//            $areaModel = M('mis_dynamic_form_areainfo');
-//            if(C('AREA_TYPE')==1){
-//                $areainfomap['actionname'] = $this->getActionName();
-//            }elseif(C('AREA_TYPE')==2){
-//                $areainfomap['tablename'] = D($this->getActionName())->getTableName();
-//            }
-//            $areainfomap['dataid'] = $id ;
-//            $areainfomap['formid'] = getFieldBy($this->getActionName(),'modelname','formid','mis_dynamic_database_mas') ;
-//        /**
-//         * 修改后的地区信息获取 END
-//         */
-//        $areaArr = $areaModel->where($areainfomap)->select();
-//        foreach ($areaArr as $key=>$val){
-//            $areainfolist[$val['fieldname']]=$val;
-//        }
 
-//        $this->assign('areainfo' , $areainfolist);
+        /**
+         * 修改后的地图信息获取 Start
+         */
+
+            $mapModel = M('mis_dynamic_form_areainfo');
+            if(C('AREA_TYPE')==1){
+                $areainfoMap['actionname'] = $this->getActionName();
+            }elseif(C('AREA_TYPE')==2){
+                $areainfoMap['tablename'] = D($this->getActionName())->getTableName();
+            }
+        $areainfoMap['tableid'] = $id ;
+//        $areainfoMap['formid'] = getFieldBy($this->getActionName(),'modelname','formid','mis_dynamic_database_mas') ;
+        /**
+         * 修改后的地区信息获取 END
+         */
+        $areaMap = $mapModel->where($areainfoMap)->select();
+//        dump($areaMap);exit;
+        foreach ($areaMap as $key=>$val){
+            $areainfolist[$val['fieldname']]=$val;
+        }
+
+//        dump($areainfolist);exit;
+        $this->assign('areainfoMap' , $areainfolist);
         $this->assign('areainfoarry' , $areainfoarry);
         //lookup带参数查询
         $module=A($name);
@@ -6625,14 +6627,15 @@ EOF;
                 $data['tablename'] = $tablename;
                 $data['actionname'] = $actionname;
                 $data['tableid'] = $inserid;
-                $data['detail'] = $val['formattedAddress'];
+                $data['detail'] = $detail;
                 $data['province'] = $val['province'];
                 $data['city'] = $val['city'];
                 $data['area'] = $val['area'];
+                $data['address'] = $val['address'];
                 //经度
-                $data['longitude'] = $val['lng'];
+                $data['longitude'] = $val['longitude'];
                 //纬度
-                $data['latitude'] = $val['lat'];
+                $data['latitude'] = $val['latitude'];
                 $data['fieldname'] = $fieldName;
 
 
@@ -6720,12 +6723,12 @@ EOF;
                 $data['tablename'] = $modelName;
                 $data['tableid'] = $inserid;
                 $data['address'] = $address;
-                $data['detail'] = $val['formattedAddress'];
+                $data['detail'] = $detail;
                 $data['fieldname'] = $fieldName;
                 //横坐标
-                $data['coordinatex'] = $val['lat'];
+                $data['coordinatex'] = $val['latitude'];
                 //纵坐标
-                $data['coordinatey'] =  $val['lng'];
+                $data['coordinatey'] =  $val['longitude'];
                 // 将重新处理完格式的级联数据写入主数组
                 $data = array_merge($data , $SelData);
                 // 检查当前数据是否存在
