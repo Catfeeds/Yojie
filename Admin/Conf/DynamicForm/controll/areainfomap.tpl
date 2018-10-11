@@ -4,7 +4,7 @@
                         <div class="#class#" original="#original#" category="#category#" style="#style#">
                             <label class="label_new">{$fields["#fields#"]}</label>
                             {:W('ShowArea',
-                            array("0"=>$areainfoarry["#fields#"],
+                            array("0"=>$areainfo["#fields#"],
                             "1"=>#fields#,
                             "2"=>$fields[#fields#],
                             "3"=>"",
@@ -16,8 +16,8 @@
                                 <input type="hidden" name="areainfo[#fields#][city]" value="{$areainfo['#fields#']['city']}">
                                 <input type="hidden" name="areainfo[#fields#][area]" value="{$areainfo['#fields#']['area']}">
                                 <input type="hidden" name="areainfo[#fields#][address]" value="{$areainfo['#fields#']['address']}">
-                                <input type="hidden" name="areainfo[#fields#][lng]" value="{$areainfo['#fields#']['lng']}"/>
-                                <input type="hidden" name="areainfo[#fields#][lat]" value="{$areainfo['#fields#']['lat']}"/>
+                                <input type="hidden" name="areainfo[#fields#][longitude]" value="{$areainfo['#fields#']['longitude']}"/>
+                                <input type="hidden" name="areainfo[#fields#][latitude]" value="{$areainfo['#fields#']['latitude']}"/>
                                 <input type="hidden" name="areainfo[#fields#][formattedAddress]" value="{$areainfo['#fields#']['detail']}"/>
                             </div>
                         </div>
