@@ -15,6 +15,8 @@
                                 <input type="hidden" name="areainfo[#fields#][province]" value="{$areainfo['#fields#']['province']}">
                                 <input type="hidden" name="areainfo[#fields#][city]" value="{$areainfo['#fields#']['city']}">
                                 <input type="hidden" name="areainfo[#fields#][area]" value="{$areainfo['#fields#']['area']}">
+                                <input type="hidden" name="areainfo[#fields#][area]" value="{$areainfo['#fields#']['town']}">
+                                <input type="hidden" name="areainfo[#fields#][area]" value="{$areainfo['#fields#']['street']}">
                                 <input type="hidden" name="areainfo[#fields#][address]" value="{$areainfo['#fields#']['address']}">
                                 <input type="hidden" name="areainfo[#fields#][longitude]" value="{$areainfo['#fields#']['longitude']}"/>
                                 <input type="hidden" name="areainfo[#fields#][latitude]" value="{$areainfo['#fields#']['latitude']}"/>
